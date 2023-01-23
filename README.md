@@ -25,7 +25,7 @@ $ docker run -it --rm -v ${pwd}/music-uploads:/input -v ${pwd}/done:/output -v $
 
 ```bash
 $ pip3 install -r requirements.txt
-$ python3 youtube-music-organizer --help
+$ python3 identify.py --help
 ```
 
 ## Usage
@@ -46,5 +46,5 @@ This utility is interactive. To resolve any ambiguity, you will be prompted with
 ### Examples:
 
 ```bash
-$ identify.py -d ./music-uploads -o ./done --copy metadata.json
+$ python3 identify.py -d ./music-uploads -o ./done --copy metadata.json
 ```
