@@ -89,14 +89,15 @@ def disambiguate(path, distances):
         choice = input("[m]ore, [s]kip: ")
         if choice.casefold() == 'm':
             limit += 5
+            continue
         elif choice.casefold() == 's':
             return None
         elif choice.isnumeric():
             index = int(choice) - 1
             if 0 <= index < len(curated):
                 return curated[index].metadata.id
-        else:
-            print(f'{choice} is not a valid option!')
+
+        print(f'{choice} is not a valid option!')
 
 def determine_id(path, metadata):
     distances = enumerate_distances(path.stem, metadata)
