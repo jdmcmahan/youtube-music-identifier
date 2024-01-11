@@ -29,7 +29,7 @@ def deserialize_metadata(path):
         file.close()
 
 def normalize_name(name):
-    return re.sub(r"[\'\"\?\&\:\/]", '_', name)
+    return re.sub(r"[\'\"\?\&\*\:\/]", '_', name)
 
 def enumerate_distances(name, metadata):
     distances = {}
